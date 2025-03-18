@@ -30,9 +30,10 @@ class CustomDataset(torch.utils.data.Dataset):
         
         # Process the label file (assuming it contains text annotations)
         with open(label_path, 'r') as f:
-            label_line = f.readline().strip()
-            label_values = [float(x) for x in label_line.split()]
-            label = torch.tensor(label_values, dtype=torch.float)
+            label_line = f.readline().strip()  # e.g., "0" or "0.0"
+            # Convert to float first then to int in case it's written with a decimal point
+            label = int(label_line)
+            label = torch.tensor(label, dtype=torch.long)  # Create a scalar tensor of type long
         
         return image, label
 
@@ -40,8 +41,8 @@ class CustomDataset(torch.utils.data.Dataset):
         return len(self.image_files)
 
 
-def DataLoaderFunc(file_name):
+def DataLoaderFunc(file_name,batch_size=32,shuffle=True):
     train_dataset = CustomDataset(file_name)
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=shuffle)
 
     return train_loader

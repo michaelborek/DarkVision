@@ -12,6 +12,3 @@ class Resnet18(nn.Module):
         
         num_features = self.model.fc.in_features
         self.model.fc = nn.Linear(num_features, num_classes)
-
-    def forward(self, x):
-        return self.model(x)
