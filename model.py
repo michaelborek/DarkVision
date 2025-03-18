@@ -12,3 +12,12 @@ class Resnet18(nn.Module):
         
         num_features = self.model.fc.in_features
         self.model.fc = nn.Linear(num_features, num_classes)
+    
+    def forward(self, x):
+        return self.model(x)
+    
+    def prediction(self, logits):
+        probas = torch.softmax(logits, dim=1)
+        labels = torch.argmax(probas, dim=1)
+
+        return labels, probas
