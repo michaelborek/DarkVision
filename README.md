@@ -13,13 +13,13 @@ This project aims to train a model on animal pictures so that it can accurately 
 
 ## Project Overview
 
-The goal is to build and compare different models (such as CNNs and logistic regression) for animal classification. We first train on regularly lit animal images, then evaluate and refine our model to perform well on **night vision images**, which are more challenging and imbalanced.
+The goal is to build and compare different models (such as pre-trained ResNet18 and fine-tuned ResNet18) for animal classification. We first train on regularly lit animal images, then evaluate and refine our model to perform well on **night vision images**, which are more challenging and imbalanced.
 
 **Key Points:**
 
 - **Multiclass classification** of animal images (e.g., Cat, Dog, Cow, Goat, Hen, etc.).  
 - **Night vision scenario**: The dataset has fewer examples, leading to imbalance and making the task more difficult.  
-- **Benchmarking** with both a deep learning model (CNN) and a simpler baseline (multinomial logistic regression).  
+- **Benchmarking** with both a deep learning model (Fine-Tuned ResNet18) and a simpler baseline (Pre-trained ResNet18).  
 
 ---
 
