@@ -10,7 +10,7 @@ train_dataset = './train_dataset.csv'
 train_loader = DataLoaderFunc(train_dataset, 128)
 
 num_classes = 8
-num_epochs = 15
+num_epochs = 8
 learning_rate = 0.001
 
 model = Resnet18(num_classes=num_classes, use_pretrained=True)

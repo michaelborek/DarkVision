@@ -1,0 +1,8 @@
+Epoch 1/8, Train Loss: 0.3588, Validation Loss: 2.4760, Validation Accuracy: 48.66%
+Epoch 2/8, Train Loss: 0.1642, Validation Loss: 1.0871, Validation Accuracy: 72.24%
+Epoch 3/8, Train Loss: 0.1115, Validation Loss: 0.5624, Validation Accuracy: 84.12%
+Epoch 4/8, Train Loss: 0.0849, Validation Loss: 0.4604, Validation Accuracy: 86.72%
+Epoch 5/8, Train Loss: 0.0489, Validation Loss: 0.4313, Validation Accuracy: 87.04%
+Epoch 6/8, Train Loss: 0.0516, Validation Loss: 1.3551, Validation Accuracy: 71.88%
+Epoch 7/8, Train Loss: 0.0856, Validation Loss: 0.5913, Validation Accuracy: 85.56%
+Epoch 8/8, Train Loss: 0.0408, Validation Loss: 0.2350, Validation Accuracy: 92.86%

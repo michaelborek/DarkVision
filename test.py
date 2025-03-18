@@ -17,8 +17,8 @@ model = model.to(device)
 model.eval()
 
 # Load the test dataset
-test_dataset = '../Dataset_Of_animal_Images/NewData/test/'
-test_loader = DataLoaderFunc(test_dataset, 5, False)
+test_dataset = './dataset/train_dataset.csv'
+test_loader = DataLoaderFunc(test_dataset, 128, shuffle=False)
 
 all_preds = []
 all_labels = []
