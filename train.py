@@ -4,13 +4,13 @@ import torch.nn as nn
 from model import Resnet18 
 from utils import DataLoaderFunc
 
-val_dataset = '../Dataset_Of_animal_Images/NewData/val/'
-val_loader = DataLoaderFunc(val_dataset)
-train_dataset = '../Dataset_Of_animal_Images/NewData/train/'
-train_loader = DataLoaderFunc(train_dataset)
+val_dataset = './val_dataset.csv'
+val_loader = DataLoaderFunc(val_dataset, 128)
+train_dataset = './train_dataset.csv'
+train_loader = DataLoaderFunc(train_dataset, 128)
 
-num_classes = 3
-num_epochs = 5
+num_classes = 8
+num_epochs = 15
 learning_rate = 0.001
 
 model = Resnet18(num_classes=num_classes, use_pretrained=True)
