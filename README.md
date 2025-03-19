@@ -37,7 +37,7 @@ For some experiments, the project relies on CSV files (e.g., `train_dataset.csv`
 
 1. **Clone the repository**:
    ```bash
-   git clone 
+   git clone https://github.com/michaelborek/DarkVision.git
    cd DarkVision
    ```
 2. **Install the required dependencies**:
