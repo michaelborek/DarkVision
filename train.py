@@ -6,9 +6,9 @@ from model import Resnet18
 from utils import DataLoaderFunc, get_loss_function  
 
 def main(loss_name):
-    val_dataset = './dataset/val_dataset_test.csv'
+    val_dataset = './dataset/val_dataset.csv'
     val_loader = DataLoaderFunc(val_dataset, batch_size=4)
-    train_dataset = './dataset/train_dataset_test.csv'
+    train_dataset = './dataset/train_dataset.csv'
     train_loader = DataLoaderFunc(train_dataset, batch_size=4)
     
     num_classes = 8
