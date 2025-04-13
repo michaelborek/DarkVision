@@ -7,12 +7,12 @@ from utils import DataLoaderFunc, get_loss_function
 
 def main(loss_name):
     val_dataset = './dataset/val_dataset.csv'
-    val_loader = DataLoaderFunc(val_dataset, batch_size=4)
+    val_loader = DataLoaderFunc(val_dataset, batch_size=128)
     train_dataset = './dataset/train_dataset.csv'
-    train_loader = DataLoaderFunc(train_dataset, batch_size=4)
+    train_loader = DataLoaderFunc(train_dataset, batch_size=128)
     
     num_classes = 8
-    num_epochs = 1
+    num_epochs = 8
     learning_rate = 0.001
 
     model = Resnet18(num_classes=num_classes, use_pretrained=True)
